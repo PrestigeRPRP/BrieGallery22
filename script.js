@@ -10,7 +10,7 @@ AFRAME.registerComponent('music-1-handler', {
     }
   })
 
-
+/*
   AFRAME.registerComponent('music-2-handler', {
     init: function () {
       let playing = false;
@@ -28,7 +28,7 @@ AFRAME.registerComponent('music-1-handler', {
     }
   })
 
-/*
+
   AFRAME.registerComponent('music-3-handler', {
     init: function () {
       let playing = false;
