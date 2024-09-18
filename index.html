@@ -9,7 +9,21 @@
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
 
 </head>
+  <script>
+alert ('Use WASD to move and Drag mouse for direction')
 
+AFRAME.registerComponent('music-1-handler', {
+    init: function () {
+      let audio = document.querySelector("#music1");
+      audio.volume = 0.06; // Set the volume to 0.06
+      this.el.addEventListener('click', () => {
+        audio.play(); // Play the audio on click
+      });
+    }
+  })
+
+
+  </script>
 <body>
 
 <a-scene renderer="antialias: true; colorManagement: true; sortObjects: true; physicallyCorrectLights: true;">
@@ -20,7 +34,7 @@
     <img id="ceiling" src="images/ceiling copy.jpg"></img>
 
     <audio id="music1" src="/pasilyo2.mp3" preload="auto"></audio>
-    
+   
   </a-assets>
   
   
@@ -69,11 +83,13 @@
     <a-entity geometry="primitive: box; width: 6; height: 3.2; depth: 0.1;"
       material="src: url(brie12.png)"
       music-1-handler
-      position="4 2 -5"></a-entity>
+      position="4 2 -5">
+    </a-entity>
+
     <a-entity geometry="primitive: box; width: 5.69; height: 3.2; depth: 0.1;"
       material="src: url(brie2.png)"
-      
-      position="11 2 -4.9"></a-entity>
+      position="11 2 -4.9">
+    </a-entity>
 
     <!-- left wall images -->
     <a-entity geometry="primitive: box; width: 4; height: 3; depth: 0.1;"
@@ -132,7 +148,6 @@
   </a-scene>
   
 
-<script src="script.js"></script>
 </body>
 
 </html>
